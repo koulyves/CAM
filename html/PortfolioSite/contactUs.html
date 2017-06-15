@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact US </title>
+        <style>
+            table, th, td{
+                margin-top:-100px; margin-left:70px
+            }
+        </style>
+    </head> 
+    <body>
+        <form action ="a" method = "post">
+            <table>
+                    <td><label id="firstNameLabel" for="firstName">First Name: </label></td>
+                    <td><input id="firstname" name="firstname" type="text" /></td>
+                </tr>
+                </br>
+                <tr>
+                    <td><label id="lastNameLabel" for="lastName">Last Name: </label></td>
+                    <td><input id="lastname" name="lastname" type="text" /></td>
+                </tr>
+                </br>
+                <tr>
+                    <td><label id="EmailLabel" for="Email">Email: </label></td>
+                    <td><input id="Email" name="Email" type="text" /></td>
+                </tr>
+        
+                </br>
+                <tr>
+                    <td><label id="typeofLicense" for="typeofLicense">Type of License: </label></td>
+                    <td><input type="radio" name="Business" value="Business" checked >Business
+                    <input type="radio" name="Personal" value="Personal" >Personal</td>
+                </tr>
+                </br>
+                <tr>
+                    <td><label id="reason" for="reason">Reason: </label></td>
+                    <td><select name ="reason">
+                        <option value ="reason">Options</option>
+                        <option value ="reason">Select a Reason</option>
+                        <option value ="reason">Software Support</option>
+                        <option value ="reason">Hardware Support</option>
+                        <option value ="reason">Information Request</option>
+                    </select></td>
+                </tr>
+                </br>
+                <tr>
+                    <td><label id="MessageLabel" for="Message">Additional Information: </label></td>
+                    <td><textarea id="Message" name="Message"></textarea></td></br>
+                                        
+                </tr>
+                <tr>
+                    <td><input type="checkbox"name="terms" value="terms" id="terms">
+                    <label for="terms">I have read the terms of service.</label></td>
+                    <br>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Send Request"/></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>        

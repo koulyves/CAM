@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact US </title>
+        <style>
+            table, th, td{
+                margin-top:-100px; margin-left:70px
+            }
+        </style>
+    </head> 
+    <body>
+        <h1><center>The Cave</center></h1>
+        <hr>
+        <a href ="HomePage.html"> Home  </a>
+        <a href ="Menu.html"> Menu </a>
+        <a href ="contactusRest.html"> Contact US </a>
+        </br>
+        <form action ="a" method = "post">
+            <table align="center">
+                    <td><label id="NameLabel" for="Name">Name: </label></td>
+                    <td><input id="name" name="name" type="text" /></td>
+                </tr>
+                </br>
+                
+                <tr>
+                    <td><label id="EmailLabel" for="Email">Email: </label></td>
+                    <td><input id="Email" name="Email" type="text" /></td>
+                </tr>
+                </br>
+                <tr>
+                    <td><label id="phoneLabel" for="phone">Phone: </label></td>
+                    <td><input id="phone" name="phone" type="text" /></td>
+                </tr>
+                </br>
+
+                </br>
+                <tr>
+                    <td><label id="reason" for="reason">Reason for Inquiry: </label></td>
+                    <td><select name ="reason">
+                        <option value ="reason">Catering</option>
+                        <option value ="reason">Private Party</option>
+                        <option value ="reason">Feedback</option>
+                        <option value ="reason">Other</option>
+                       </select></td>
+                </tr>
+                </br>
+                
+
+                <tr>
+                    <td><label id="MessageLabel" for="Message">Additional Information: </label></td>
+                    <td><textarea id="Message" name="Message"></textarea></td></br>
+                                        
+                </tr>
+                <tr>
+                    <td>
+                    <label id="yes" for="yes">Have you been to the restaurant? </label>
+                    </td>
+                    <td><input type="radio" name="yes" value="yes" checked> Yes
+                    <input type="radio" name="no" value="no"> No</td>
+                    
+                    </td>
+                                                            
+                </tr>
+                <tr>
+                    <td>
+                    <label id="M" for="M">Best days to contact you: </label>
+                    </td>
+                    <td>   
+                    <input type="checkbox" name="M" value="M"> M
+                    <input type="checkbox" name="T" value="T"> T
+                    <input type="checkbox" name="W" value="W"> W
+                    <input type="checkbox" name="TH" value="TH"> TH
+                    <input type="checkbox" name="F" value="TH"> F
+                    <br/>
+                    <center><input type="submit" value="Send Request"></center>
+
+                    </td>
+                             
+                                                                        
+                </tr>
+
+            </table>
+        </form>
+        <footer>
+            <p>
+                <hr>
+                <center>30 Parkside Place Malden, MA 03801</center>
+            </p>
+            <p>
+                <center>Phone:603 970 1875</center>
+            </p>
+        </footer>
+    </body>
+</html>        
