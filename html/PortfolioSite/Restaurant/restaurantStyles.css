@@ -32,18 +32,24 @@ text-align:center;
 color:maroon;
 font-family:'Calibri';}
 /*index*/ 
-
  
-#resdescrip{  
-width: 370px;  
-height: 200px;  
- 	margin: 15px;  
- 	padding: 15px;  
-  	border-style: solid ;  
-  	border-width:1px;  
-  	border-color:whitesmoke;  
-  	text-align: left;  
-  	line-height: 15px;  
-  	}  
-
 body {background-color:beige;}
+
+a {
+    text-decoration:none;
+}
+
+a:hover {
+    background-color: orange;
+    text-decoration: underline
+} 
+a:visited { 
+     color: green;
+}
+table,td, th {
+    padding-top: 20px;
+    text-align: justify;
+	font-family: 'calibri';
+	width: 60%;
+	height: 10px;
+} 
