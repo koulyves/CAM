@@ -13,8 +13,27 @@ div {
     background-position: center;
 }
 .btnPad {margin-left:90px; margin-right:15px;}
-table, th, td {
+table,td {
     border: 1px solid black;
     border-collapse: collapse;
     text-align: center;
+    background-color: brown;
     } 
+
+th {
+    background-color:gray;
+    }
+
+td {
+    font-style: italic;
+}
+
+a {
+    text-decoration:none;
+}
+
+a:hover {
+    background-color: greenyellow;
+    text-decoration: underline;
+}    
+
