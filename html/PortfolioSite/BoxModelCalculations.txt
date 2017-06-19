@@ -1,0 +1,8 @@
+Total width = 20 + 1 + 10 + 150 + 10 + 1 + 20 = 212px
+Total width = 20 + 1 + 10 + 400 + 10 + 1 + 20 = 462px
+
+Browser calculated height = border-top + padding-top + (height of the content)+ padding-bottom + border-bottom
+Browser calculated height = 1 + 10 + 150 + 10 + 1 = 172px
+
+Browser calculated Width = border-left + padding-left + (width of the content)+ padding-right + border-right
+Browser calculated Width = 1 + 10 + 400 + 10 + 1 = 422px
