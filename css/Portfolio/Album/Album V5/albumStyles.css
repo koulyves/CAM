@@ -14,17 +14,17 @@ div {
 .btnPad {margin-left:90px; margin-right:15px;}
 
 /*Responsive table*/
-table {
+table, tr {
     border: 1px solid black;
     border-collapse: collapse;
     text-align: center;
     background-color: brown;
+    border-collapse: collapse;
+    width: 70%;
 } 
 
-/* Zebra striping 
-tr:nth-of-type(odd) {
- background:beige;
-}*/
+li {text-align: 90px;
+    margin-left: 220px;}
 
 th {
  background: gray;
