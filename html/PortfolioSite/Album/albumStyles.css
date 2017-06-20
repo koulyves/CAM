@@ -22,10 +22,10 @@ table {
     background-color: brown;
 } 
 
-/* Zebra striping */
+/* Zebra striping 
 tr:nth-of-type(odd) {
- background:brown;
-}
+ background:beige;
+}*/
 
 th {
  background: gray;
