@@ -1,0 +1,67 @@
+<!DOCTYPE css> 
+/*global styles*/ 
+	 
+ul{ 
+list-style-type: none; 
+margin: 0; 
+padding: 10px; 
+overflow: hidden; 
+ 	} 
+ 	 
+li { 
+display: block; 
+width: 120px; 
+float:left; 
+} 
+	 
+li a { 
+display:block; 
+text-align:center; 
+padding-left: 20px;  
+text-decoration:none; 
+padding-right:20px; 
+} 
+ 
+h1{ 
+text-align:center; 
+color:maroon;
+font-family:'Calibri';} 
+
+footer{ 
+text-align:center; 
+color:maroon;
+font-family:'Calibri';}
+/*index*/ 
+ 
+form {background-color:beige}
+
+
+a {
+    text-decoration:none;
+}
+
+a:hover {
+    background-color: orange;
+    text-decoration: underline
+} 
+a:visited { 
+     color: green;
+}
+table,td, th {
+    padding-top: 20px;
+    text-align: justify;
+	font-family: 'calibri';
+	width: 60%;
+	height: 10px;
+}
+
+.responSite {
+    float: left;
+    margin: 5px;
+    padding: 15px;
+    max-width: 300px;
+    height: 300px;
+    border: 1px solid black;
+} 
+
+
