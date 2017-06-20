@@ -10,12 +10,28 @@
             p{color: purple;}
             ul{color:brown; font-family: 'italic';}
             .btnPad {margin-left:90px; margin-right:15px;} 
+            div.container {border-radius: 50%; text-align: center;}
+            img {width: 30%}
+            tr:nth-child(odd) { background-color:#eee; }
+            tr:nth-child(even) { background-color:#fff; }
         </Style>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     
     <body class="btnPad" style="font-family: 'Comic Sans MS';">
-        <div>
-            <img src = "albumimage/MeteoraLP.jpg" style="width:0px; height:400px;">
+        <div class="container">
+            <img src = "albumimage/MeteoraLP.jpg" class="img-circle">
         </div>
 
         <center>
@@ -41,19 +57,20 @@
                 <li>Rob Bourdon &#8211 Drums, percussion</li>
             </ul></i>
         <h4>Tracks</h4>
-            <table align ="center";>
+        <div class="table-responsive">
+            <table class="table">
                 <tr>
-                    <th>Track#</th>
-                    <th>Track Title</th>
-                    <th>Track Length</th>
+                    <th style="text-align:center;">Track#</th>
+                    <th style="text-align:center;">Track Title</th>
+                    <th style="text-align:center;">Track Length</th>
                 </tr>
                
-                <tr>
+                <tr class="Foreword">
                     <td>1</td>
                     <td>Foreword</td>
                     <td>0:13</td>
                 </tr>
-                <tr>        
+                <tr class="Don't Stay">        
                     <td>2</td>
                     <td>Don't Stay</td>
                     <td>3:07</td>
@@ -92,6 +109,7 @@
                     <td>Figure.09</td>
                     <td>3:17</td>
                 </tr>
-            </table>        
+            </table> 
+        </div>           
     </body>
 </html>

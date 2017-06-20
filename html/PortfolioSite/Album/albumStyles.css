@@ -13,16 +13,23 @@ div {
     background-position: center;
 }
 .btnPad {margin-left:90px; margin-right:15px;}
-table,td {
+
+/*Responsive table*/
+table {
     border: 1px solid black;
     border-collapse: collapse;
     text-align: center;
     background-color: brown;
-    } 
+} 
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+ background:brown;
+}
 
 th {
-    background-color:gray;
-    }
+ background: gray;
+ }
 
 td {
     font-style: italic;
@@ -35,5 +42,7 @@ a {
 a:hover {
     background-color: greenyellow;
     text-decoration: underline;
-}    
+} 
+
+
 
