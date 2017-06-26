@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+    <html>
+     <head>
+      <title>Sample Audition Problem</title>
+     </head>
+<script type ="text/JavaScript" src="sampleAuditionProblem.js"></script>
+<!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
+<style media="screen">
+    
+    table {
+        width:40%;
+}
+
+    .titles {
+    text-align: left;
+    font-family: calibri;
+    font-weight: bold;
+    padding-bottom: 10px;
+    }
+
+    caption {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: calibri;
+    text-align: right;
+    }
+
+
+    .displayevens {
+    text-align: center;
+    padding-top: 10px;
+    }
+
+</style>
+
+<!--########################################################################################################################################################## -->
+<body>
+<table>
+    <caption class="titles">Sample</caption>
+<form>
+    <tr>
+    <!--Starting Number Line with Form -->
+    <td class="titles" style ="font-family:calibri;">Starting Number</td>
+    <td class="align-left"><input id="startingNum" type="text"></td>
+    </tr>
+    <tr>
+    <!-- Ending Number Line with Form -->
+    <td class="titles" style ="font-family:calibri;">Ending Number</td>
+    <td class="align-left"><input id="endingNum" type="text"></td>
+    </tr>
+    <tr>
+    <!-- Step Line with Form -->
+    <td class="titles" style ="font-family:calibri;">Step</td>
+    <td class="align-left"><input id="step" type="text"></td>
+    </tr>
+    <tr>
+    <!-- Button covered in both columns -->
+    <td class="displayevens" colspan="2" style ="font-family:calibri;"><button onclick="return playButton()" id="play">Display Evens</button></td>
+    </tr>
+    
+</form>
+
+<!--########################################################################################################################################################## -->
+
+</table>
+    <div class="container">
+        <p style="font-family: calibri;">Here are the even numbers between <span id="startNum"></span> and <span id="endNum"></span> by <span id="stepNum"></span>'s:</p>
+        <span id="result"></span>
+    </div>
+</body>
+</html>
