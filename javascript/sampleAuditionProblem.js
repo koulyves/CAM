@@ -51,4 +51,7 @@ function validateForm() {
         document.forms["myForm"]["num3"].focus();
        return false;
    }
+   if (num2>=num1){
+       alert("Ending Number cannot be less than or equal to Starting Number.");
+   }
 }
