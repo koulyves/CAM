@@ -1,7 +1,9 @@
 function playButton(){
+    validateForm();
     run();
     return false;
 }
+
 function run(){
     var x = parseInt(document.getElementById("startingNum").value);
     var y = parseInt(document.getElementById("endingNum").value);
@@ -19,4 +21,34 @@ function run(){
     for (var i = 0; i<evenNum.length; i++){
       document.getElementById("result").innerHTML += "<p>" + evenNum[i] + "</p>";  
     }
+    
+
+}
+
+function validateForm() {
+    var num1 = document.forms["myForm"]["startingNum"].value;
+    var num2 = document.forms["myForm"]["endingNum"].value;
+    var num3 = document.forms["myForm"]["step"].value;
+
+    if (num1 == "" || isNaN(num1)) {
+        alert("Starting Number must be filled in with a positive number.");
+        document.forms["myForm"]["num1"]
+           .parentElement.className = "form-group has-error";
+        document.forms["myForm"]["num1"].focus();
+        return false;
+    }
+   if (num2 == "" || isNaN(num2)) {
+       alert("Ending Number must be filled in with a positive number.");
+        document.forms["myForm"]["num2"]
+           .parentElement.className = "form-group has-error";
+        document.forms["myForm"]["num2"].focus();
+       return false;
+   }
+   if (num3 == "" || isNaN(num3)) {
+       alert("Step Number must be filled in with a positive number.");
+        document.forms["myForm"]["num3"]
+           .parentElement.className = "form-group has-error";
+        document.forms["myForm"]["num3"].focus();
+       return false;
+   }
 }
