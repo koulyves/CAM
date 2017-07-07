@@ -53,5 +53,6 @@ function validateForm() {
    }
    if (num2>=num1){
        alert("Ending Number cannot be less than or equal to Starting Number.");
-   }
+    }
+
 }
