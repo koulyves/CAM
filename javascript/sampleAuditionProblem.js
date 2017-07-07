@@ -30,6 +30,11 @@ function validateForm() {
     var num2 = document.forms["myForm"]["endingNum"].value;
     var num3 = document.forms["myForm"]["step"].value;
 
+       if (num2>=num1){
+        alert("Ending Number cannot be less than or equal to Starting Number.");
+        return false;
+    }
+
     if (num1 == "" || isNaN(num1) || num1<=0) {
         alert("Starting Number must be filled in with a positive number.");
         document.forms["myForm"]["num1"]
@@ -51,8 +56,5 @@ function validateForm() {
         document.forms["myForm"]["num3"].focus();
        return false;
    }
-   if (num2>=num1){
-       alert("Ending Number cannot be less than or equal to Starting Number.");
-    }
 
 }
