@@ -30,21 +30,21 @@ function validateForm() {
     var num2 = document.forms["myForm"]["endingNum"].value;
     var num3 = document.forms["myForm"]["step"].value;
 
-    if (num1 == "" || isNaN(num1)) {
+    if (num1 == "" || isNaN(num1) || num1<=0) {
         alert("Starting Number must be filled in with a positive number.");
         document.forms["myForm"]["num1"]
            .parentElement.className = "form-group has-error";
         document.forms["myForm"]["num1"].focus();
         return false;
     }
-   if (num2 == "" || isNaN(num2)) {
+   if (num2 == "" || isNaN(num2) || num2<=0) {
        alert("Ending Number must be filled in with a positive number.");
         document.forms["myForm"]["num2"]
            .parentElement.className = "form-group has-error";
         document.forms["myForm"]["num2"].focus();
        return false;
    }
-   if (num3 == "" || isNaN(num3)) {
+   if (num3 == "" || isNaN(num3) || num3<=0) {
        alert("Step Number must be filled in with a positive number.");
         document.forms["myForm"]["num3"]
            .parentElement.className = "form-group has-error";
