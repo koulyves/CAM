@@ -26,11 +26,11 @@ function run(){
 }
 
 function validateForm() {
-    var num1 = document.forms["myForm"]["startingNum"].value;
-    var num2 = document.forms["myForm"]["endingNum"].value;
-    var num3 = document.forms["myForm"]["step"].value;
+    var num1 = parseInt(document.forms["myForm"]["startingNum"].value);
+    var num2 = parseInt(document.forms["myForm"]["endingNum"].value);
+    var num3 = parseInt(document.forms["myForm"]["step"].value);
 
-       if (num2>=num1){
+       if (num2<=num1){
         alert("Ending Number cannot be less than or equal to Starting Number.");
         return false;
     }
