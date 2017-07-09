@@ -30,8 +30,11 @@ function validateForm() {
     var num2 = parseInt(document.forms["myForm"]["endingNum"].value);
     var num3 = parseInt(document.forms["myForm"]["step"].value);
 
-       if (num2<=num1){
+    if (num2 <= num1){
         alert("Ending Number cannot be less than or equal to Starting Number.");
+        document.forms["myForm"]["num2"]
+            .parentElement.className = "form-group has-error";
+        document.forms["myForm"]["num2"].focus();
         return false;
     }
 
