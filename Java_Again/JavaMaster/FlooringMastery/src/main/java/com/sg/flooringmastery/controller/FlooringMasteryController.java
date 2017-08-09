@@ -68,6 +68,7 @@ public class FlooringMasteryController {
         }
     }
 //******************************************************************************
+
     private int getMenuSelection()
             throws FlooringMasteryPersistenceException,
             InvalidSelectionException {

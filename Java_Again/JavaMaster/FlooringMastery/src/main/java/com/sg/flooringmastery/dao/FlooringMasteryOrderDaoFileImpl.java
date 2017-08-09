@@ -38,18 +38,23 @@ public class FlooringMasteryOrderDaoFileImpl implements FlooringMasteryOrderDao 
 //}  
 //******************************************************************************
     @Override
-    public void createOrder(LocalDate date, Order order) {
-        //ADD AN IF STATEMENT TO VALIDATE IF ORDER EXIST. IF NO CREATE A NEW ONE
+    public void createOrder(LocalDate date, Order order)
+            throws FlooringMasteryPersistenceException {            
         HashMap<Integer, Order> newMap = new HashMap<>();
         if (orderMapMemory.get(date) == null) {
-            newMap.put(order.getNumber(), order);
-            orderMapMemory.put(date, newMap);
+            try {
+                loadOrder(date);
+            } catch (FlooringMasteryPersistenceException e) {
+                newMap.put(order.getNumber(), order);
+                orderMapMemory.put(date, newMap);
+            }
         }
     }
 
     @Override
     public void removeOrder(LocalDate date, Integer number)
             throws FlooringMasteryPersistenceException {
+        loadOrder(date);
         orderMapMemory.get(date).remove(number);
     }
 
@@ -86,7 +91,7 @@ public class FlooringMasteryOrderDaoFileImpl implements FlooringMasteryOrderDao 
         Scanner scanner;
 
         try {
-            scanner = new Scanner(new BufferedReader(new FileReader("Orders_" + date.format(formatter)+ ".txt")));
+            scanner = new Scanner(new BufferedReader(new FileReader("Orders_" + date.format(formatter) + ".txt")));
 
         } catch (FileNotFoundException e) {
             throw new FlooringMasteryPersistenceException("-_- COULD NOT LOAD ORDER DATA FROM MEMORY.", e);
@@ -94,7 +99,9 @@ public class FlooringMasteryOrderDaoFileImpl implements FlooringMasteryOrderDao 
 
         String currentLine;
         String[] currentTokens;
-
+        
+        HashMap<Integer, Order> newMap = new HashMap<>();
+        
         while (scanner.hasNextLine()) {
             currentLine = scanner.nextLine();
             currentTokens = currentLine.split(DELIMITER);
@@ -102,7 +109,7 @@ public class FlooringMasteryOrderDaoFileImpl implements FlooringMasteryOrderDao 
             Order newOrder = new Order(Integer.parseInt(currentTokens[0]));
 
             newOrder.setCustomerName(currentTokens[1]);
-            
+
             StateTax newStateTax = new StateTax(currentTokens[2]);
             newStateTax.setTaxRate(new BigDecimal(currentTokens[3]));
             newOrder.setTaxRate(newStateTax);
@@ -110,18 +117,17 @@ public class FlooringMasteryOrderDaoFileImpl implements FlooringMasteryOrderDao 
             Product newProduct = new Product(currentTokens[4]);
             newProduct.setLaborCostPerSqFt(new BigDecimal(currentTokens[5]));
             newProduct.setCostPerSqFt(new BigDecimal(currentTokens[6]));
-            newOrder.setProductType(newProduct);            
+            newOrder.setProductType(newProduct);
 
             newOrder.setArea(new BigDecimal(currentTokens[7]));
-            newOrder.setMaterialCost(new BigDecimal(currentTokens[8]));            
+            newOrder.setMaterialCost(new BigDecimal(currentTokens[8]));
             newOrder.setLaborCost(new BigDecimal(currentTokens[9]));
-            
-            
+
             newOrder.setTax(new BigDecimal(currentTokens[10]));
             newOrder.setTotal(new BigDecimal(currentTokens[11]));
 
-            HashMap<Integer, Order> newMap = new HashMap<>();
             
+
             orderMapMemory.put(date, newMap);
             newMap.put(newOrder.getNumber(), newOrder);
 

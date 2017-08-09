@@ -32,7 +32,6 @@ public class FlooringMasteryServiceLayerFileImpl implements FlooringMasteryServi
 
     }
 //******************************************************************************
-
     @Override
     public List<Order> getOrders(LocalDate date)
             throws NoOrderFoundException, FlooringMasteryPersistenceException  {
