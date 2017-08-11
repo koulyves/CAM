@@ -56,10 +56,11 @@ public class FlooringMasteryOrderDaoFileImpl implements FlooringMasteryOrderDao 
             }
         }
         //loadOrder(date);
+        order = orderMapMemory.get(date).put(order.getNumber(), order);
         saveOrder(date);
         return order;
     }
-
+//******************************************************************************
     @Override
     public void removeOrder(LocalDate date, Integer number)
             throws FlooringMasteryPersistenceException {
@@ -154,7 +155,7 @@ public class FlooringMasteryOrderDaoFileImpl implements FlooringMasteryOrderDao 
             throw new FlooringMasteryPersistenceException("COULD NOT FIND THE ORDER. ", e);
         }
         List<Order> orderList = this.retrieveOrdersByDate(date);
-        System.out.println("List"+ orderList.size());
+        //out.print("List"+ orderList.size());//FOR my Own troubleshooting
         for (Order currentOrder : orderList) {
             out.print(currentOrder.getNumber() + DELIMITER
                     + currentOrder.getCustomerName() + DELIMITER
@@ -167,8 +168,8 @@ public class FlooringMasteryOrderDaoFileImpl implements FlooringMasteryOrderDao 
                     + currentOrder.getMaterialCost() + DELIMITER
                     + currentOrder.getLaborCost() + DELIMITER
                     + currentOrder.getTax() + DELIMITER
-                    + currentOrder.getTotal());
-            System.out.println("Order" + currentOrder.toString());
+                    + currentOrder.getTotal() + "\n");
+            
             out.flush();
         }
         out.close();

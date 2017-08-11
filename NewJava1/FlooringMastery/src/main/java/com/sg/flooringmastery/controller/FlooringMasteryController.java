@@ -97,8 +97,7 @@ public class FlooringMasteryController {
 
     private void addOrders()
             throws NoOrderFoundException,
-            FlooringMasteryPersistenceException,
-            InvalidMoneyException {
+            FlooringMasteryPersistenceException,InvalidMoneyException {
         LocalDate date = null;
         Order order = null;
         boolean hasErrors = false;
@@ -108,14 +107,14 @@ public class FlooringMasteryController {
                 view.displayAddOrdersBanner();
                 date = view.displayDateBanner();
                 order = view.displayGetOrderInfo();
-                service.createOrder(date, order);
-                view.displayAddOrdersSucessBanner();
+                service.createOrder(date, order);                
             } catch (FlooringMasteryPersistenceException e) {
                 view.displayErrorMessage(e.getMessage());
             }
         } while (hasErrors);
         if (view.commitOrder()) {
             service.commitWork(date, order);
+            view.displayAddOrdersSucessBanner();
         } else {
             view.displayOrderNotSaved();
         }

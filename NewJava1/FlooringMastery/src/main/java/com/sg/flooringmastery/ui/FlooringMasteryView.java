@@ -94,7 +94,6 @@ public class FlooringMasteryView {
 
         Order currentOrder = new Order();
 
-        //currentOrder.setOrderNumber(UUID.randomUUID().toString().toUpperCase().substring(24));
         currentOrder.setCustomerName(customerName);
         StateTax newStateTax = new StateTax(stateName);
         currentOrder.setTaxRate(newStateTax);
@@ -110,11 +109,19 @@ public class FlooringMasteryView {
         return io.readLocalDate("Please Enter Local Date ", "MMddyyyy");
 
     }
+
     public void displayOrderNotSaved() {
         io.print("Order Not Saved!");
 
     }
+//******************************************************************************      
+
+    public boolean commitOrder() {
+        io.print("\n");
+        return io.readBoolean("Do You Want To Commit Your Changes (Y/N)?");
+    }
 //******************************************************************************    
+
     public void displayExitBanner() {
         io.print("Thanks for being a awesome customer! PLEASE COME BACK.");
     }
@@ -145,12 +152,12 @@ public class FlooringMasteryView {
             InvalidMoneyException {
         boolean writeAgain = true;
         int userChoice = 0;
-        
+
         while (writeAgain) {
             userChoice = displayEditingOptionBanner();
             switch (userChoice) {
                 case 1:
-                    LocalDate newDate = io.readLocalDate("Please Enter The New Date:", "MMddyyyy");                    
+                    LocalDate newDate = io.readLocalDate("Please Enter The New Date:", "MMddyyyy");
 //                  date
                     break;
                 case 2:
@@ -175,7 +182,5 @@ public class FlooringMasteryView {
         }
     }
 //******************************************************************************
-public boolean commitOrder(){
-    return io.readBoolean("Do You Wanna Commit Yoru Change");
-}    
+
 }

@@ -106,10 +106,9 @@ public class FlooringMasteryServiceLayerFileImpl implements FlooringMasteryServi
             NoOrderFoundException, InvalidMoneyException {
         return orderDao.createOrder(date, order);
     }
-    
+//******************************************************************************       
     private int generateOrderNumbers()throws FlooringMasteryPersistenceException{
                     Scanner scanner;
-
             try {
                 scanner = new Scanner(new BufferedReader(new FileReader("orderNumbers.txt")));
 
@@ -135,4 +134,5 @@ public class FlooringMasteryServiceLayerFileImpl implements FlooringMasteryServi
            out.close();
            return nextNumber;
     }
+//******************************************************************************       
 }
